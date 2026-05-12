@@ -48,12 +48,12 @@ def check_player_info(target_id):
             "ban_status": ban_message,
             "developed by": "pankaj-ux"
         }
-,
+
     except Exception as e:
         return {"error": str(e)}
 
 
-# ✅ HOME ROUTE (IMPORTANT)
+# ✅ HOME ROUTE
 @app.route('/')
 def home():
     return jsonify({
@@ -74,6 +74,7 @@ def check_ban_status():
     result = check_player_info(uid)
 
     if "error" in result:
+        # Agar ID nahi mili toh 404 error
         return jsonify(result), 404
 
     return jsonify(result)
@@ -81,3 +82,4 @@ def check_ban_status():
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 10000))
     app.run(host='0.0.0.0', port=port)
+    
