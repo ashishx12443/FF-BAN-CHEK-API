@@ -48,7 +48,7 @@ def check_player_info(target_id):
             "ban_status": ban_message,
             "developed by": "pankaj-ux"
         }
-
+,
     except Exception as e:
         return {"error": str(e)}
 
@@ -58,7 +58,7 @@ def check_player_info(target_id):
 def home():
     return jsonify({
         "status": "API is running",
-        "endpoint": "/bancheck?uid=YOUR_UID"
+        "endpoint": "/bancheck?uid=YOUR_UID",
         "developed by": "pankaj-ux"
     })
 
