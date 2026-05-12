@@ -45,7 +45,7 @@ def check_player_info(target_id):
             "uid": target_id,
             "nickname": nickname,
             "region": region,
-            "ban_status": ban_message
+            "ban_status": ban_message,
             "developed by": "pankaj-ux"
         }
 
